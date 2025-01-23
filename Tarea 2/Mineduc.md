@@ -43,7 +43,7 @@ GROUP BY ?codigoRegion
 ORDER BY DESC(?porcentajePIE)
 ```
 ### Respuesta
-![Respuesta Query 1](./img/query2R.png)
+![Respuesta Query 2](./img/query2R.png)
 
 ## Cantidad de escuelas por región (Federada)
 Esta consulta utiliza Wikidata para entregar el nombre de la región basado en el número de la región que se encuentra en los datos.
@@ -80,3 +80,5 @@ where {
 
 }
 ```
+### Respuesta
+![Respuesta Query 3](./img/query3R.png)
