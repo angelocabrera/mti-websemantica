@@ -23,7 +23,7 @@ ORDER BY DESC(?escuelas)
 ### Respuesta
 ![Respuesta Query 1](./img/query1R.png)
 
-## Cantidad de establecimientos con Proyecto de Integración Especial (PIE) por región
+## Cantidad de establecimientos con Programa de Integración Especial (PIE) por región
 
 ```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
@@ -42,6 +42,8 @@ WHERE {
 GROUP BY ?codigoRegion
 ORDER BY DESC(?porcentajePIE)
 ```
+### Respuesta
+![Respuesta Query 1](./img/query2R.png)
 
 ## Cantidad de escuelas por región (Federada)
 Esta consulta utiliza Wikidata para entregar el nombre de la región basado en el número de la región que se encuentra en los datos.
