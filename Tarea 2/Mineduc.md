@@ -46,8 +46,7 @@ ORDER BY DESC(?porcentajePIE)
 ![Respuesta Query 2](./img/query2R.png)
 
 ## Cantidad de escuelas por región (Federada)
-Esta consulta utiliza Wikidata para entregar el nombre de la región basado en el número de la región que se encuentra en los datos.
-
+> [!NOTE] Esta consulta utiliza Wikidata para entregar el nombre de la región basado en el número de la región que se encuentra en los datos.
 ```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
 PREFIX schema: <https://schema.org/>
