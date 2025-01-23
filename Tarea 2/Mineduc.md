@@ -21,10 +21,6 @@ WHERE {
 ORDER BY DESC(?escuelas)
 ```
 
-### Respuesta
-![Respuesta Query 1](./img/query1R.png)
-
-
 ## Cantidad de establecimientos con Proyecto de Integración Especial (PIE) por región
 
 ```
