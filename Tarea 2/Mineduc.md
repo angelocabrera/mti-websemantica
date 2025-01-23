@@ -1,5 +1,5 @@
 ## Cantidad de establecimientos por tipo de pago
-`
+```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
 PREFIX schema: <https://schema.org/>
 
@@ -19,4 +19,4 @@ WHERE {
   BIND (ROUND(?escuelas / ?total * 100 * 100) / 100 AS ?porcentaje) 
 } 
 ORDER BY DESC(?escuelas)
-`
+```
