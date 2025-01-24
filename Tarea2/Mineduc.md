@@ -1,6 +1,6 @@
 ## Cantidad de establecimientos por tipo
 > [!NOTE]
-> El tipo está definido en el diccionario de datos asociado a la fuente oficial de información
+> El tipo está definido en el diccionario de datos asociado a la fuente oficial de información.  Se filtra por estado "1" (establecimiento funcionando)
 ```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
 PREFIX schema: <https://schema.org/>
@@ -22,6 +22,10 @@ WHERE {
     WHERE {
       ?school a schema:School .
       ?school mineduc:cod_depe ?tipo_establecimiento .
+      ?school mineduc:estado_estab ?estado .
+
+      FILTER(STR(?estado) = "1")
+
     } 
     GROUP BY ?tipo_establecimiento 
   }
@@ -30,7 +34,7 @@ WHERE {
 ORDER BY DESC(?escuelas)
 ```
 ### Respuesta en Apache-Fuseki
-![Respuesta Query 1](./img/queryM1.png)
+![Respuesta Query 1](./img/queryM12.png)
 
 ### Llamada al Endpoint
 ```
