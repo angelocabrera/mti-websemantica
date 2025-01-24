@@ -20,3 +20,5 @@ Y obtenemos la siguiente respuesta:
 > Es importante señalar que los establecimientos municipales y los administrados por los Servicios Locales de Educación (SLE) conforman conjuntamente el > sector público de la educación en Chile. La categoría "Municipal DAEM" se refiere a los establecimientos administrados directamente por los > Departamentos de Administración de Educación Municipal, los cuales están incluidos en la cifra de establecimientos municipales mencionada anteriormente.
 > 
 > Para obtener información más detallada y actualizada, se recomienda consultar el "Análisis de la base de datos oficial del Directorio de > establecimientos" del Ministerio de Educación de Chile. ([Biblioteca Digital Mineduc](https://bibliotecadigital.mineduc.cl/bitstream/handle/20.500.12365/> 19688/APUNTES%2036_2023_fd01.pdf?sequence=1&utm_source=chatgpt.com)) 
+
+Si lo comparamos con la respuesta entregada por los datos cargados en SparQL: ![Respuesta Query 1](./img/queryM12.png) vemos que se acercan bastante, per varían ya que ChatGPT sólo encuentra los datos del año 2023, y los datos cargados corresponden al año 2024
