@@ -12,6 +12,8 @@ PREFIX schema: <https://schema.org/>
 GROUP BY ?comuna
 ORDER BY DESC(?cantidad)
 ```
+### Respuesta
+![Respuesta Query 1](./img/queryF1.png)
 
 ## Cantidad de farmacias por comuna, agrupadas por nombre de farmacia, agregando la URL del sitio web de la comuna (consulta Federada)
 > [!NOTE]
@@ -54,4 +56,5 @@ WHERE {
 }
 
 ```
-
+### Respuesta
+![Respuesta Query 2](./img/queryF2.png)
