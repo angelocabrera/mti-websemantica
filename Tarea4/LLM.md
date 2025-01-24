@@ -1,4 +1,5 @@
-## Comparando respuestas de LLM con los datos obtenidos con SparQL
+## Comparando respuestas de LLM con los datos obtenidos con SPARQL
+### Caso 1
 Tomaremos la consulta [Cantidad de establecimientos por tipo](https://github.com/angelocabrera/mti-websemantica/blob/main/Tarea2/Mineduc.md#cantidad-de-establecimientos-por-tipo).
 
 Usando ChatGPT con la búsqueda web activada, realizamos la pregunta:
@@ -21,7 +22,7 @@ Y obtenemos la siguiente respuesta:
 > 
 > Para obtener información más detallada y actualizada, se recomienda consultar el "Análisis de la base de datos oficial del Directorio de > establecimientos" del Ministerio de Educación de Chile. ([Biblioteca Digital Mineduc](https://bibliotecadigital.mineduc.cl/bitstream/handle/20.500.12365/> 19688/APUNTES%2036_2023_fd01.pdf?sequence=1&utm_source=chatgpt.com)) 
 
-Si lo comparamos con la respuesta entregada por los datos cargados en SparQL: 
+Si lo comparamos con la respuesta entregada por los datos cargados en SPARQL: 
 
 ![Respuesta Query 1](../Tarea2/img/queryM12.png) 
 
