@@ -7,8 +7,12 @@ Integrantes:
 ### Mineduc
 Directorio de establecimientos educacionales en CSV para el año 2024.
 
+El archivo TTL generado con la información de los establecimientos se encuentra [AQUI](Tarea1/datosMineduc_23012025.ttl)
+
 ### Farmacias
 Listado de farmacias de Chile provisto por Minsal en formato JSON.
+
+El archivo TTL generado con la información de las farmacias se encuentra [AQUI](Tarea1/minsal-farmacias-16012025-v5.ttl)
 
 ## Tarea 2
 Crear un endpoint SPARQL para almacenar los datos RDF anteriores y realizar consultas SPARQL interesantes sobre dicho endpoint indicando los resultados obtenidos. Si no se puede crear el endpoint SPARQL, alternativamente se podría trabajar con datos en memoria.
