@@ -30,15 +30,15 @@ WHERE {
 ORDER BY DESC(?escuelas)
 ```
 ### Respuesta en Apache-Fuseki
-![Respuesta Query 1](./img/queryM12.png)
+![Respuesta Query 1](./img/queryM1.png)
 
 ### Llamada al Endpoint
 ```
-http://localhost:3030/mineduc_directorio/?query=PREFIX%20mineduc%3A%20%3Chttps%3A%2F%2Fdatosabiertos.mineduc.cl%2Fdirectorio-de-establecimientos-educacionales%2F%3E%0APREFIX%20schema%3A%20%3Chttps%3A%2F%2Fschema.org%2F%3E%0A%0ASELECT%20%3Ftipo_pago%20%3Fescuelas%20%3Fporcentaje%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%28COUNT%28%3Fs%29%20AS%20%3Ftotal%29%20WHERE%20%7B%3Fs%20a%20schema%3ASchool%7D%0A%20%20%7D%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Ftipo_pago%20%28COUNT%28%3Fschool%29%20AS%20%3Fescuelas%29%20%0A%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fschool%20a%20schema%3ASchool%20.%0A%20%20%20%20%20%20%3Fschool%20mineduc%3Apago_mensual%20%3Ftipo_pago%20.%0A%20%20%20%20%7D%20%0A%20%20%20%20GROUP%20BY%20%3Ftipo_pago%20%0A%20%20%7D%0A%20%20BIND%20%28ROUND%28%3Fescuelas%20%2F%20%3Ftotal%20%2A%20100%20%2A%20100%29%20%2F%20100%20AS%20%3Fporcentaje%29%20%0A%7D%20%0AORDER%20BY%20DESC%28%3Fescuelas%29
+http://localhost:3030/mineduc_directorio/?query=PREFIX%20mineduc%3A%20%3Chttps%3A%2F%2Fdatosabiertos.mineduc.cl%2Fdirectorio-de-establecimientos-educacionales%2F%3E%0APREFIX%20schema%3A%20%3Chttps%3A%2F%2Fschema.org%2F%3E%0A%0ASELECT%20%0A%28IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%221%22%2C%20%22Corporacion%20Municipal%22%2C%20%0A%20%20%20%20IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%222%22%2C%20%22Municipal%20DAEM%22%2C%20%0A%20%20%20%20%20%20IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%223%22%2C%20%22Particular%20Subvencionado%22%2C%0A%20%20%20%20%20%20%20%20IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%224%22%2C%20%22Particular%20Pagado%22%2C%0A%20%20%20%20%20%20%20%20%20%20IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%225%22%2C%20%22Corporaci%C3%B3n%20Administracion%20Delegada%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20IF%28STR%28%3Ftipo_establecimiento%29%20%3D%20%226%22%2C%20%22Servicio%20Local%20de%20Educacion%22%2C%20%22Otro%22%29%29%29%29%29%29%20AS%20%3Ftipo_est%29%0A%20%3Fescuelas%20%3Fporcentaje%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%28COUNT%28%3Fs%29%20AS%20%3Ftotal%29%20WHERE%20%7B%3Fs%20a%20schema%3ASchool%7D%0A%20%20%7D%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Ftipo_establecimiento%20%28COUNT%28%3Fschool%29%20AS%20%3Fescuelas%29%20%0A%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fschool%20a%20schema%3ASchool%20.%0A%20%20%20%20%20%20%3Fschool%20mineduc%3Acod_depe%20%3Ftipo_establecimiento%20.%0A%20%20%20%20%7D%20%0A%20%20%20%20GROUP%20BY%20%3Ftipo_establecimiento%20%0A%20%20%7D%0A%20%20BIND%20%28ROUND%28%3Fescuelas%20%2F%20%3Ftotal%20%2A%20100%20%2A%20100%29%20%2F%20100%20AS%20%3Fporcentaje%29%20%0A%7D%20%0AORDER%20BY%20DESC%28%3Fescuelas%29
 ```
 
 ### Respuesta del Endpoint
-![Respuesta Endpoint 1](./img/endpointM1.png)
+![Respuesta Endpoint 1](./img/endpointM12.png)
 
 
 ## Cantidad de establecimientos con Programa de Integración Especial (PIE) por región
