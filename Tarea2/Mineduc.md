@@ -1,27 +1,36 @@
-## Cantidad de establecimientos por tipo de pago
+## Cantidad de establecimientos por tipo
+> [!NOTE]
+> El tipo está definido en el diccionario de datos asociado a la fuente oficial de información
 ```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
 PREFIX schema: <https://schema.org/>
 
-SELECT ?tipo_pago ?escuelas ?porcentaje
+SELECT 
+(IF(STR(?tipo_establecimiento) = "1", "Corporacion Municipal", 
+    IF(STR(?tipo_establecimiento) = "2", "Municipal DAEM", 
+      IF(STR(?tipo_establecimiento) = "3", "Particular Subvencionado",
+        IF(STR(?tipo_establecimiento) = "4", "Particular Pagado",
+          IF(STR(?tipo_establecimiento) = "5", "Corporación Administracion Delegada",
+            IF(STR(?tipo_establecimiento) = "6", "Servicio Local de Educacion", "Otro")))))) AS ?tipo_est)
+ ?escuelas ?porcentaje
 WHERE {
   {
     SELECT (COUNT(?s) AS ?total) WHERE {?s a schema:School}
   }
   {
-    SELECT ?tipo_pago (COUNT(?school) AS ?escuelas) 
+    SELECT ?tipo_establecimiento (COUNT(?school) AS ?escuelas) 
     WHERE {
       ?school a schema:School .
-      ?school mineduc:pago_mensual ?tipo_pago .
+      ?school mineduc:cod_depe ?tipo_establecimiento .
     } 
-    GROUP BY ?tipo_pago 
+    GROUP BY ?tipo_establecimiento 
   }
   BIND (ROUND(?escuelas / ?total * 100 * 100) / 100 AS ?porcentaje) 
 } 
 ORDER BY DESC(?escuelas)
 ```
 ### Respuesta en Apache-Fuseki
-![Respuesta Query 1](./img/query1R.png)
+![Respuesta Query 1](./img/queryM12.png)
 
 ### Llamada al Endpoint
 ```
