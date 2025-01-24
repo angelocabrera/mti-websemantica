@@ -14,10 +14,10 @@ Crear un endpoint SPARQL para almacenar los datos RDF anteriores y realizar cons
 *Opcional 2*: Crear consultas federadas combinando los datos anteriores con otros endpoints SPARQL como puede ser Wikidata.
 
 ### Mineduc Directorio Oficial
-[Las consultas creadas están descritas en](Tarea2/Mineduc.md)
+Las consultas creadas para este conjunto de datos están descritas en [AQUI](Tarea2/Mineduc.md)
 
 ### Minsal listado de Farmacias
-[Las consultas creadas están descritas en](Tarea2/Minsal.md)
+Las consultas creadas para este conjunto de datos están descritas en [AQUI](Tarea2/Minsal.md)
 
 ## Tarea 3
 
