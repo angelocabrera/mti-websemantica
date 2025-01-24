@@ -13,7 +13,7 @@ GROUP BY ?comuna
 ORDER BY DESC(?cantidad)
 ```
 
-## Cantidad de farmacias por comuna, agregando la URL del sitio web de la comuna (consulta Federada)
+## Cantidad de farmacias por comuna, agrupadas por nombre de farmacia, agregando la URL del sitio web de la comuna (consulta Federada)
 > [!NOTE]
 > Esta consulta utiliza Wikidata para obtener el listado de todas las comunas de Chile y la url de sus sitios web, y luego se cruza con la información del Ministerio de Salud
 ```
