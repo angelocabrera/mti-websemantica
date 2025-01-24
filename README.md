@@ -32,3 +32,4 @@ Las consultas creadas para este conjunto de datos están descritas en [AQUI](Tar
 ## Tarea 3
 
 ## Tarea 4
+El detalle del desarrollo de la Tarea 4 se encuentra [AQUI](Tarea4/LLM.md)
