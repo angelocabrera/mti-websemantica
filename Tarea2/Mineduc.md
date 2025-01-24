@@ -64,7 +64,7 @@ http://localhost:3030/mineduc_directorio/?query=PREFIX%20mineduc%3A%20%3Chttps%3
 
 ## Cantidad de escuelas por región (Federada)
 > [!NOTE]
-> Esta consulta utiliza Wikidata para entregar el nombre de la región basado en el número de la región que se encuentra en los datos.
+> Esta consulta utiliza Wikidata para entregar el nombre y código de la región basado en el número de la región que se encuentra en los datos.
 ```
 PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
 PREFIX schema: <https://schema.org/>
