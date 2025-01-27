@@ -1,0 +1,64 @@
+PREFIX : <http://example.org/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
+PREFIX schema: <https://schema.org/>
+
+START = @<SchoolShape>
+
+<SchoolShape> {
+  a [schema:School];
+  mineduc:cod_com_rbd xsd:string+;
+  mineduc:cod_depe xsd:string+;
+  mineduc:cod_depe2 xsd:string+;
+  mineduc:cod_deprov_rbd xsd:string+;
+  mineduc:cod_pro_rbd xsd:string+;
+  mineduc:cod_reg_rbd xsd:string+;
+  mineduc:convenio_pie xsd:boolean?;
+  mineduc:dgv_rbd xsd:string+;
+  mineduc:ens_01 xsd:string?;
+  mineduc:ens_02 xsd:string?;
+  mineduc:ens_03 xsd:string?;
+  mineduc:ens_04 xsd:string?;
+  mineduc:ens_05 xsd:string?;
+  mineduc:ens_06 xsd:string?;
+  mineduc:ens_07 xsd:string?;
+  mineduc:ens_08 xsd:string?;
+  mineduc:ens_09 xsd:string?;
+  mineduc:ens_10 xsd:string?;
+  mineduc:ens_11 xsd:string?;
+  mineduc:espe_01 xsd:string?;
+  mineduc:espe_02 xsd:string?;
+  mineduc:espe_03 xsd:string?;
+  mineduc:espe_04 xsd:string?;
+  mineduc:espe_05 xsd:string?;
+  mineduc:espe_06 xsd:string?;
+  mineduc:espe_07 xsd:string?;
+  mineduc:espe_08 xsd:string?;
+  mineduc:espe_09 xsd:string?;
+  mineduc:espe_10 xsd:string?;
+  mineduc:espe_11 xsd:string?;
+  mineduc:estado_estab xsd:string+;
+  mineduc:mat_total xsd:integer+;
+  mineduc:matricula xsd:integer+;
+  mineduc:nom_com_rbd xsd:string+;
+  mineduc:nom_deprov_rbd xsd:string+;
+  mineduc:nom_reg_rbd_a xsd:string+;
+  mineduc:ori_otro_glosa xsd:string?;
+  mineduc:ori_religiosa xsd:string?;
+  mineduc:p_juridica xsd:string+;
+  mineduc:pace xsd:boolean?;
+  mineduc:pago_matricula xsd:boolean?;
+  mineduc:pago_mensual xsd:boolean?;
+  mineduc:rbd xsd:string+;
+  mineduc:rural_rbd xsd:boolean?;
+  mineduc:rut_sostenedor xsd:string+;
+  mineduc:year xsd:gYear+;
+  schema:name xsd:string+;
+  schema:geo @<GeoCoordinatesShape>;
+}
+
+<GeoCoordinatesShape> {
+  a [schema:GeoCoordinates];
+  schema:latitude xsd:float+;
+  schema:longitude xsd:float+;
+}

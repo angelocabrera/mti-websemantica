@@ -1,0 +1,223 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mineduc: <https://datosabiertos.mineduc.cl/directorio-de-establecimientos-educacionales/>
+PREFIX schema: <https://schema.org/>
+
+mineduc:SchoolShape a sh:NodeShape ;
+    sh:targetClass schema:School ;
+    sh:property [
+        sh:path mineduc:cod_com_rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:cod_depe ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:cod_depe2 ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:cod_deprov_rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:cod_pro_rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:cod_reg_rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:convenio_pie ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path mineduc:dgv_rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_01 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_02 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_03 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_04 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_05 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_06 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_07 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_08 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_09 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_10 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ens_11 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_01 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_02 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_03 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_04 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_05 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_06 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_07 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_08 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_09 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_10 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:espe_11 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:estado_estab ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:mat_total ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path mineduc:matricula ;
+        sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path mineduc:nom_com_rbd ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:nom_deprov_rbd ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:nom_reg_rbd_a ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ori_otro_glosa ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:ori_religiosa ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:p_juridica ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:pace ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path mineduc:pago_matricula ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path mineduc:pago_mensual ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path mineduc:rbd ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path mineduc:rural_rbd ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path mineduc:rut_sostenedor ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mineduc:year ;
+        sh:datatype xsd:gYear ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:geo ;
+        sh:node mineduc:GeoCoordinatesShape ;
+    ] .
+
+mineduc:GeoCoordinatesShape a sh:NodeShape ;
+    sh:targetClass schema:GeoCoordinates ;
+    sh:property [
+        sh:path schema:latitude ;
+        sh:datatype xsd:float ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:longitude ;
+        sh:datatype xsd:float ;
+        sh:minCount 1 ;
+    ] .

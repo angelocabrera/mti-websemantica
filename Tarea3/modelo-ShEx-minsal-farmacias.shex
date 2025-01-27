@@ -1,0 +1,28 @@
+PREFIX : <http://example.org/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex: <https://midas.minsal.cl/>
+PREFIX schema: <https://schema.org/>
+
+START = @<PharmacyShape>
+
+<PharmacyShape> {
+  a [schema:Pharmacy];
+  ex:comuna xsd:string+;
+  ex:comuna_id xsd:string+;
+  ex:fecha xsd:string+;
+  ex:local_id xsd:string+;
+  ex:localidad xsd:string+;
+  ex:localidad_id xsd:string+;
+  ex:region_id xsd:string+;
+  schema:address xsd:string+;
+  schema:geo @<GeoCoordinatesShape>;
+  schema:name xsd:string+;
+  schema:openingHours xsd:string+;
+  schema:telephone xsd:string+;
+}
+
+<GeoCoordinatesShape> {
+  a [schema:GeoCoordinates];
+  schema:latitude xsd:float+;
+  schema:longitude xsd:float+;
+}
