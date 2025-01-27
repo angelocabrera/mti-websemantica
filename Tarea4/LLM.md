@@ -67,3 +67,7 @@ Cuantas farmacias hay en la comuna de Talcahuano?
 ```
 
 De esta forma, el LLM cruza su propia información con la obtenida a través del endpoint de Data.World configurado previamente.
+
+La respuesta entregada es la siguiente:
+
+> El JSON proporcionado contiene información sobre la cantidad de farmacias en varias comunas. Tras analizar el JSON, se encontró que **en la comuna de Talcahuano hay 31 farmacias**.
