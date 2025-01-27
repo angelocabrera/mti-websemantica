@@ -47,3 +47,23 @@ Repetimos el ejercicio usando el modelo de Google **Gemini 2.0 Flash Thinking Ex
 > | **Total**                                  | **10,635**                           |
 > 
 Podemos ver acá que los datos son más precisos que con ChatGPT, pero siguen estando desactualizados
+
+## Mezclando LLM y datos RDF
+En el siguiente [Notebook](./LLM_SparQL.ipynb) se encuentra un ejemplo que mezcla la información de las farmacias obtenidas desde el JSON de Minsal, con una consulta hecha a un LLM (en este caso Gemini).  Para poder hacer la prueba se ha subido el TTL que contenía la información de las farmacias a [Data.World](https://data.world/acabreramti/farmacias-chile) y se utilizó como ejemplo una de las consultas definidas en la [Tarea 2](../Tarea2/Minsal.md).
+
+Para realizar el prompt se definen primero instrucciones para el LLM:
+
+```
+Antes de responder la pregunta, analiza el JSON que se adjunta como contexto.  
+Este json es la respuesta de un endpoint de data.world a una consulta en SparQL.  
+Analízalo adecuadamente.  
+Luego, si no hay informacion relevante en el JSON, busca en tus propios datos para tratar de responder.  
+La pregunta es
+```
+
+Luego, a estas instrucciones se le adjunta la pregunta del usuario:
+```
+Cuantas farmacias hay en la comuna de Talcahuano?
+```
+
+De esta forma, el LLM cruza su propia información con la obtenida a través del endpoint de Data.World configurado previamente.
