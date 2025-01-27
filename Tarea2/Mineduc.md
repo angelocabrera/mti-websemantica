@@ -42,7 +42,7 @@ http://localhost:3030/mineduc_directorio/?query=PREFIX%20mineduc%3A%20%3Chttps%3
 ```
 
 ### Respuesta del Endpoint
-![Respuesta Endpoint 1](./img/endpointM12.png)
+![Respuesta Endpoint 1](./img/endpointM11.png)
 
 
 ## Cantidad de establecimientos con Programa de Integración Especial (PIE) por región
